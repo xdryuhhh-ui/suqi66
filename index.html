@@ -280,24 +280,6 @@ section[id] { scroll-margin-top: 76px; }
 .pl span { color: var(--muted); font-size: 14px; }
 @media (max-width: 720px) { .pl { grid-template-columns: 1fr; } }
 
-.pay { max-width: 880px; margin: 0 auto; padding-block: 8px 80px; }
-.pay h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 4.5vw, 44px); line-height: 1.2; margin-top: 8px; }
-.pay-tabs { display: flex; gap: 8px; margin-top: 24px; flex-wrap: wrap; }
-.ptab { font: 700 15px/1 var(--font-body); color: var(--muted); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 13px 20px; cursor: pointer; transition: color .2s, background .2s, border-color .2s; }
-.ptab:hover { color: var(--fg); }
-.ptab.on { background: var(--surface-2); color: var(--accent); border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
-.panel { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 30px; }
-.pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
-.pay-grid > * { min-width: 0; }
-.lbl { font-size: 14px; color: var(--muted); }
-.num-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
-.num { font-family: var(--font-num); font-weight: 500; font-size: clamp(26px, 4.5vw, 34px); letter-spacing: 1px; color: var(--accent); user-select: all; }
-.holder { font-size: 24px; font-weight: 700; margin-top: 4px; color: #fff; }
-.notes h3 { font-size: 18px; font-weight: 700; margin-bottom: 14px; }
-.notes .ul svg { stroke: var(--accent); }
-.notes .ul li { font-size: 15px; color: #fff; }
-.visa-note { color: var(--muted); margin-top: 8px; max-width: 34em; }
-@media (max-width: 720px) { .pay-grid { grid-template-columns: 1fr; gap: 28px; } .panel { padding: 22px 18px; } }
 
 footer { border-top: 1px solid var(--line); }
 footer .in-wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 28px; color: var(--muted); font-size: 14px; }
@@ -368,6 +350,8 @@ main:not([hidden]) { animation: viewin .55s ease both; }
 nav a.l.on { color: var(--fg); background: var(--surface-2); }
 .plan .btn:disabled, .btn[aria-disabled="true"] { pointer-events: none; }
 @media (prefers-reduced-motion: reduce) { .progress { transition: none; } }
+.contact { max-width: 880px; margin: 0 auto; padding-block: 8px 80px; text-align: center; }
+.contact h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 4.5vw, 44px); line-height: 1.3; margin-top: 8px; }
 </style>
 
 <div id="app" dir="rtl" lang="ar">
@@ -595,14 +579,14 @@ nav a.l.on { color: var(--fg); background: var(--surface-2); }
       <div class="in-wrap">
         <div class="reveal">
           <div class="eyebrow">ازاي تبدأ</div>
-          <h2 class="h">من التحويل لحد أول فاتورة في 3 خطوات</h2>
+          <h2 class="h">من أول مكالمة لحد أول فاتورة في 3 خطوات</h2>
         </div>
         <ol class="steps reveal">
-          <li><b>حوّل المبلغ</b><span>اختار الباقة الأساسية (999 جنيه) وحوّل على المحفظة الإلكترونية، وخد سكرين شوت للتحويل.</span></li>
-          <li><b>أكّد معانا</b><span>كلمنا واتساب أو بالتليفون على الرقم نفسه، وابعت سكرين شوت التحويل.</span></li>
+          <li><b>اتصل واتس اب</b><span>كلمنا على الرقم واتس اب واطلب الباقة الأساسية (999 جنيه).</span></li>
+          <li><b>استلم البرنامج</b><span>التحميل والتسليم بيتم أونلاين بالكامل بعد ما تتفق معانا.</span></li>
           <li><b>حمّل وابدأ</b><span>التحميل والتسليم أونلاين. ثبّت البرنامج، أنشئ حساب المدير، وضيف أصنافك.</span></li>
         </ol>
-        <div class="cta-row reveal"><a class="btn pri" href="#pricing">شوف الأسعار وطرق الدفع</a></div>
+        <div class="cta-row reveal"><a class="btn pri" href="#pricing">شوف الأسعار</a></div>
       </div>
     </section>
 
@@ -615,12 +599,12 @@ nav a.l.on { color: var(--fg); background: var(--surface-2); }
         <div class="faq reveal">
           <details><summary>هل البرنامج محتاج إنترنت؟</summary><p>لا. الباقة الأساسية بتشتغل من غير إنترنت وبيانات المحل محفوظة على جهازك. الإنترنت محتاجه بس وقت تحميل البرنامج.</p></details>
           <details><summary>هيشتغل على جهازي القديم؟</summary><p>البرنامج بيدعم ويندوز 7 وويندوز 10، ومناسب للأجهزة الضعيفة.</p></details>
-          <details><summary>ازاي هستلم البرنامج؟</summary><p>التحميل والتسليم أونلاين بعد ما تحوّل وتأكد معانا على واتساب أو بالتليفون.</p></details>
+          <details><summary>ازاي هستلم البرنامج؟</summary><p>التحميل والتسليم أونلاين بالكامل، بعد ما تكلمنا على واتساب وتتفق معانا.</p></details>
           <details><summary>لو الجهاز باظ، بياناتي بتضيع؟</summary><p>في نسخ احتياطي تلقائي لبيانات المحل، فتقدر ترجّعها على الجهاز الجديد.</p></details>
           <details><summary>بيطبع إيصال على الطابعة الحرارية؟</summary><p>أيوه، الإيصال بيطبع بشعار المحل على الطابعة الحرارية بمقاس 58 أو 80 مم.</p></details>
           <details><summary>أقدر أدّي الكاشير صلاحيات محدودة؟</summary><p>أيوه. تقدر تمنع الكاشير من الخصم أو الإلغاء أو تعديل السعر، وتخلي ده للمدير بس. وكل عملية متسجلة في سجل النشاط.</p></details>
           <details><summary>ايه الفرق بين الباقة الأساسية وSuqi Premium؟</summary><p>Suqi Premium جاية قريب بـ1500 جنيه، وفيها التحكم من الموبايل ومتابعة المبيعات من أي مكان و20 ميزة زيادة. أول 10 مشتركين في الباقة الأساسية بياخدوها مجاناً لما تنزل.</p></details>
-          <details><summary>ازاي أدفع؟</summary><p>التحويل على المحفظة الإلكترونية (الرقم والاسم في صفحة الأسعار). بعد التحويل كلمنا للتأكيد، وراجع الرقم والاسم قبل ما تحوّل.</p></details>
+          <details><summary>ازاي أطلب البرنامج؟</summary><p>اتصل على الرقم واتس اب، أو اضغط على زر واتساب اللي تحت على الشمال.</p></details>
         </div>
       </div>
     </section>
@@ -661,7 +645,7 @@ nav a.l.on { color: var(--fg); background: var(--surface-2); }
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>التحميل والتسليم أونلاين</li>
             <li class="soonli"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>أول 10 مشتركين: Suqi Premium مجاناً لما تنزل</li>
           </ul>
-          <a class="btn pri" id="buy" href="#pricing">اطلب البرنامج دلوقتي</a>
+          <a class="btn pri" id="buy" href="https://wa.me/201227870493?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20Suqi" target="_blank" rel="noopener">اطلب البرنامج دلوقتي</a>
         </article>
 
         <article class="plan later">
@@ -710,47 +694,10 @@ nav a.l.on { color: var(--fg); background: var(--surface-2); }
         </ol>
       </section>
 
-      <section class="pay" id="pay" aria-labelledby="pay-h">
-        <div class="eyebrow">طرق الدفع</div>
-        <h2 id="pay-h">اختار طريقة الدفع اللي تناسبك</h2>
-        <div class="pay-tabs" role="tablist" aria-label="طرق الدفع">
-          <button class="ptab on" role="tab" aria-selected="true" data-p="wallet" id="t-wallet">المحافظ الإلكترونية</button>
-          <button class="ptab" role="tab" aria-selected="false" data-p="visa" id="t-visa">فيزا</button>
-        </div>
-
-        <div class="panel" id="p-wallet" role="tabpanel" aria-labelledby="t-wallet">
-          <div class="pay-grid">
-            <div class="acct">
-              <div class="lbl">حوّل على رقم المحفظة</div>
-              <div class="num-row">
-                <b class="num" id="wallet-num" dir="ltr"></b>
-                <button class="btn ghost sm" id="copy-num" type="button">نسخ الرقم</button>
-              </div>
-              <div class="lbl mt20">الاسم اللي هيظهر عند التحويل</div>
-              <div class="holder"></div>
-              <div class="cta-row mt24">
-                <a class="btn pri sm" id="wa-confirm" href="https://wa.me/201227870493" target="_blank" rel="noopener">تواصل واتساب للتأكيد</a>
-                <a class="btn ghost sm" href="tel:+201227870493">اتصال: 01227870493</a>
-              </div>
-            </div>
-            <div class="notes">
-              <h3>ملاحظات مهمة</h3>
-              <ul class="ul">
-                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>بعد التحويل لازم تتواصل معانا واتساب أو بالتليفون على نفس الرقم (01227870493) للتأكيد.</li>
-                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>خد سكرين شوت لعملية التحويل واحتفظ بيه.</li>
-                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>إحنا مش مسؤولين لو حوّلت على رقم غلط، فراجع الرقم والاسم كويس قبل ما تحوّل.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel" id="p-visa" role="tabpanel" aria-labelledby="t-visa" hidden>
-          <div class="acct">
-            <div class="lbl">الدفع بالفيزا</div>
-            <p class="visa-note">بيانات الدفع بالفيزا هتتضاف قريباً. لحد ما تتضاف، تقدر تدفع من المحافظ الإلكترونية أو تتواصل معانا على واتساب.</p>
-            <div class="cta-row mt20"><a class="btn ghost sm" href="https://wa.me/201227870493" target="_blank" rel="noopener">تواصل واتساب</a></div>
-          </div>
-        </div>
+      <section class="contact" id="contact" aria-labelledby="contact-h">
+        <div class="eyebrow">للتواصل</div>
+        <h2 id="contact-h">للتواصل اتصل على الرقم واتس اب</h2>
+        <div class="cta-row center mt20"><a class="btn pri" href="https://wa.me/201227870493?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20Suqi" target="_blank" rel="noopener">افتح واتساب</a></div>
       </section>
     </div>
   </main>
@@ -761,7 +708,7 @@ nav a.l.on { color: var(--fg); background: var(--surface-2); }
       <nav class="foot-links" aria-label="روابط سريعة">
         <a href="#features">المميزات</a><a href="#screens">من جوا البرنامج</a><a href="#faq">الأسئلة</a><a href="#pricing">الأسعار</a>
       </nav>
-      <div class="foot-contact"><span>للتواصل واتساب أو اتصال</span><b dir="ltr">01227870493</b></div>
+      <div class="foot-contact"><span>للتواصل اتصل على الرقم واتس اب</span></div>
       <div class="foot-copy">© 2026 جميع الحقوق محفوظة</div>
     </div>
   </footer>
@@ -810,7 +757,7 @@ nav a.l.on { color: var(--fg); background: var(--surface-2); }
   }
 
   /* ---------- routing: two views, hash driven ---------- */
-  var ROUTES = { home: "home", features: "home", screens: "home", how: "home", faq: "home", pricing: "pricing", "premium-list": "pricing", pay: "pricing" };
+  var ROUTES = { home: "home", features: "home", screens: "home", how: "home", faq: "home", pricing: "pricing", "premium-list": "pricing" };
   var homeView = byId("view-home"), pricingView = byId("view-pricing"), navPricing = byId("nav-pricing");
   var navLinks = $$("nav a.l");
 
@@ -861,7 +808,6 @@ nav a.l.on { color: var(--fg); background: var(--surface-2); }
   window.addEventListener("resize", queueProgress);
 
   /* ---------- buy / premium buttons ---------- */
-  byId("buy").addEventListener("click", function (e) { e.preventDefault(); scrollToEl(byId("pay")); });
   byId("soon-btn").addEventListener("click", function () { showToast("Suqi Premium لسه مش متاحة، هتتفتح قريباً"); });
 
   /* ---------- accessible tabs (arrows, Home, End, roving focus) ---------- */
@@ -881,60 +827,6 @@ nav a.l.on { color: var(--fg); background: var(--surface-2); }
       });
     });
   }
-
-  /* ---------- payment methods ---------- */
-  var payTabs = $$(".ptab");
-  payTabs.forEach(function (t) { t.setAttribute("aria-controls", "p-" + t.getAttribute("data-p")); });
-  function selectPay(i) {
-    payTabs.forEach(function (t, k) {
-      var on = k === i;
-      t.classList.toggle("on", on);
-      t.setAttribute("aria-selected", String(on));
-      t.tabIndex = on ? 0 : -1;
-    });
-    var key = payTabs[i].getAttribute("data-p");
-    ["wallet", "visa"].forEach(function (k) { byId("p-" + k).hidden = k !== key; });
-  }
-  bindTabs(payTabs, selectPay);
-
-  function legacyCopy(text) {
-    var ta = document.createElement("textarea");
-    ta.value = text;
-    ta.setAttribute("readonly", "");
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    var ok = false;
-    try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
-    document.body.removeChild(ta);
-    return ok;
-  }
-  var copyBtn = byId("copy-num"), copyTimer = 0;
-  function copied() {
-    copyBtn.textContent = "اتنسخ ✓";
-    clearTimeout(copyTimer);
-    copyTimer = setTimeout(function () { copyBtn.textContent = "نسخ الرقم"; }, 2000);
-  }
-  function selectNumber() {
-    var r = document.createRange();
-    r.selectNodeContents(byId("wallet-num"));
-    var s = window.getSelection();
-    s.removeAllRanges();
-    s.addRange(r);
-  }
-  copyBtn.addEventListener("click", function () {
-    var num = byId("wallet-num").textContent.trim();
-    function fallback() {
-      if (legacyCopy(num)) { copied(); }
-      else { selectNumber(); showToast("حدّدنا الرقم، انسخه بإيدك"); }
-    }
-    if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(num).then(copied, fallback);
-    } else {
-      fallback();
-    }
-  });
 
   /* ---------- screenshot gallery ---------- */
   var SHOTS = [
